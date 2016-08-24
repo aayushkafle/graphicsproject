@@ -1,0 +1,76 @@
+#include "matrix.h"
+#include "transformation.h"
+#include "object.h"
+#include "camera.h"
+
+/*float ref_point[3]={0,0,1000};
+float camera_pos[3]={0,0,300};
+float camera_translate[3]={-camera_pos[0],-camera_pos[1],-camera_pos[2]};
+float camera_orient[2]={0,0};*/
+
+int main()
+{
+
+
+	float point1[3]={0,0,0};
+	point_matrix p1(point1);
+	p1.drawPoint();
+
+	float dimension[3]={10,20,30};
+	float Orientation[3]={1,1,1};
+	cuboid first(p1, Orientation, dimension);
+	first.drawCuboid();
+
+
+	/*translation camera_trns(camera_translate);
+	rotation camera_rotx(camera_orient[0],'x');
+	rotation camera_roty(camera_orient[1],'y');*/
+
+
+	/*float trans_vector1[3] = {10,10,10};
+	translation t1(trans_vector1);
+	t1.trans_matrix.drawMatrix();
+
+	rotation R1(90,'z');
+	R1.trans_matrix.drawMatrix();
+
+	transformation rotation_translation = composite_transform(t1,R1);
+	rotation_translation.trans_matrix.drawMatrix();
+
+	point_matrix tpo = result_transformed(t1,p1);
+	tpo.drawPoint();
+
+	tpo = result_transformed(R1,p1);
+	tpo.drawPoint();
+
+	tpo = result_transformed(rotation_translation,p1);
+	tpo.drawPoint();
+*/
+	
+	/*float mat1[16]={1,0,0,10,
+					0,1,0,10,
+					0,0,1,10,
+					0,0,0,1	};
+	matrix4 matr1(mat1);
+	matr1.drawMatrix();*/
+
+	/*matrix4 matr2= matr1.transpose(matr1);
+	matr2.drawMatrix();
+
+	matrix4 matr3 = matr1 + matr2;
+	matr3.drawMatrix();
+	matr3 = matr1 - matr2;
+	matr3.drawMatrix();
+	matr3 = matr1 * matr2;
+	matr3.drawMatrix();
+
+	point_matrix p2 = multiply(matr1,p1);
+	p2.drawPoint();*/
+
+
+
+
+
+
+	return 0;
+}
